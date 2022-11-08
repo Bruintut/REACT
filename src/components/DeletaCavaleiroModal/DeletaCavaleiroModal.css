@@ -1,0 +1,39 @@
+.DeletaCavaleiroModal {
+    margin-top: -20px;
+  }
+  
+  .DeletaCavaleiroModal > div {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .DeletaCavaleiroModal__foto {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    width: 80px;
+  }
+  
+  .DeletaCavaleiroModal__confirmar,
+  .DeletaCavaleiroModal__cancelar {
+    border: none;
+    border-radius: 5px;
+    font-family: "Exo", sans-serif;
+    padding: 5px;
+    max-width: 280px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 48%;
+    color: white;
+  }
+  
+  .DeletaCavaleiroModal__confirmar {
+    background-color: darkviolet;
+  }
+  
+  .DeletaCavaleiroModal__cancelar {
+    background-color: red;
+  }

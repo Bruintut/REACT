@@ -1,0 +1,25 @@
+{
+  "cavaleiros": [
+    {
+      "id": 1,
+      "name": "Seiya",
+      "skill": "Meteoro de Pegasos",
+      "picture": "assets/images/seiya.png"
+    },
+    {
+      "id": 2,
+      "name": "Ikki",
+      "skill":"Ave Fênix.",
+      "picture": "assets/images/ikki.png"
+      
+    },
+    {
+      "id": 3,
+      "name": "Hyoga",
+      "skill":"Pó de Diamante.",
+      "picture": "assets/images/hyoga.png"
+      
+    }
+    
+  ]
+}
