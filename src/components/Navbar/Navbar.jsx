@@ -6,6 +6,7 @@ import cavaleiro from "assets/icons/plus.svg";
 import edit from "assets/icons/edit.svg";
 import deletar from "assets/icons/deletar.svg";
 
+
 function Navbar({ createCavaleiro, updateCavaleiro, mode, deleteCavaleiro }) {
   return (
     <div className="Home__header Header">
