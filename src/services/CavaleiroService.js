@@ -23,14 +23,14 @@ const parseTransformItem = (response) =>
 
 export const CavaleiroService = {
   getLista: () =>
-    fetch(Api.cavaleiroLista(), { method: "GET" }).then(parseTransformLista),
+    fetch(Api.cavaleiroLista(), { mode: 'no-cors', method: "GET" }).then(parseTransformLista),
   getById: (id) =>
     fetch(Api.cavaleiroById(id), { method: "GET" }).then(parseTransformItem),
   create: (cavaleiro) =>
     fetch(Api.createCavaleiro(), {
       method: "POST",
       body: JSON.stringify(cavaleiro),
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -39,7 +39,7 @@ export const CavaleiroService = {
     fetch(Api.updateCavaleiroById(id), {
       method: "PUT",
       body: JSON.stringify(cavaleiro),
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
