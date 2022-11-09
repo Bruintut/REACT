@@ -30,7 +30,7 @@ export const CavaleiroService = {
     fetch(Api.createCavaleiro(), {
       method: "POST",
       body: JSON.stringify(cavaleiro),
-      mode: "no-cors",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -39,7 +39,7 @@ export const CavaleiroService = {
     fetch(Api.updateCavaleiroById(id), {
       method: "PUT",
       body: JSON.stringify(cavaleiro),
-      mode: "no-cors",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },

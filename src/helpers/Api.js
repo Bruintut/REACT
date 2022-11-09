@@ -1,10 +1,10 @@
 const CavaleiroContext = {
   cavaleiroEndpoint: () => `${Api.baseUrl}`,
-  cavaleiroLista: () => `${CavaleiroContext.cavaleiroEndpoint()}/`,
-  cavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/${id}`,
-  createCavaleiro: () => `${CavaleiroContext.cavaleiroEndpoint()}/POST`,
-  updatCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/${id}`,
-  deleteCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/${id}`,
+  cavaleiroLista: () => `${CavaleiroContext.cavaleiroEndpoint()}find-knights`,
+  cavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}find-knight/${id}`,
+  createCavaleiro: () => `${CavaleiroContext.cavaleiroEndpoint()}create`,
+  updatCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}update/${id}`,
+  deleteCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}delete/${id}`,
 };
 
 const SacolaContext = {
@@ -14,7 +14,7 @@ const SacolaContext = {
 }
 
 export const Api = {
-  baseUrl: " http://localhost:3000",
+  baseUrl: "  https://cavaleiros-project.herokuapp.com/knights",
   ...CavaleiroContext,
   ...SacolaContext,
 };
