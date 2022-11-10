@@ -2,19 +2,19 @@ import { Api } from "helpers/Api";
 
 const parseResponse = then((response) => response.json());
 
-const transformCavaleiro = (knight) => {
+const transformCavaleiro = (cavaleiro) => {
 
   return {
-    ...knight,
-    id: knight._id,
-    name: knight.name,
-    skill: knight.skill,
+    ...cavaleiro,
+    id: cavaleiro._id,
+    name: cavaleiro.name,
+    skill: cavaleiro.skill,
   };
 };
 
 const parseTransformLista = (response) =>
-  parseResponse(response).then((knights) =>
-  knights.map(transformCavaleiro)
+  parseResponse(response).then((cavaleiros) =>
+  cavaleiros.map(transformCavaleiro)
   );
 
 const parseTransformItem = (response) =>
@@ -25,19 +25,19 @@ export const CavaleiroService = {
     fetch(Api.cavaleiroLista(), { mode: 'no-cors', method: "GET" }).then(parseTransformLista),
   getById: (id) =>
     fetch(Api.cavaleiroById(id), { method: "GET" }).then(parseTransformItem),
-  create: (knight) =>
+  create: (cavaleiro) =>
     fetch(Api.createCavaleiro(), {
       method: "POST",
-      body: JSON.stringify(knight),
+      body: JSON.stringify(cavaleiro),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
     }).then(parseTransformItem),
-  updtateById: (id, knight) =>
+  updtateById: (id, cavaleiro) =>
     fetch(Api.updateCavaleiroById(id), {
       method: "PUT",
-      body: JSON.stringify(knight),
+      body: JSON.stringify(cavaleiro),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",

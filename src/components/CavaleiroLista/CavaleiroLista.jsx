@@ -91,11 +91,11 @@ function CavaleiroLista({
 
   return (
     <div className="CavaleiroLista">
-      {cavaleiros.map((knight, index) => (
+      {cavaleiros.map((cavaleiro, index) => (
         <CavaleiroListaItem
           mode={mode}
           key={`CavaleiroListaItem-${index}`}
-          knight={knight}
+          cavaleiro={cavaleiro}
           quantidadeSelecionada={cavaleiroSelecionado[index]}
           index={index}
           onAdd={(index) => adicionarItem(index)}

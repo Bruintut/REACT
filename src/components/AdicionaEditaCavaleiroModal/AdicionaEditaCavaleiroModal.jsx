@@ -41,7 +41,7 @@ function AdicionaEditaCavaleiroModal({
 
     const { name, skill, picture } = state;
 
-    const knight = {
+    const cavaleiro = {
       ...(cavaleiroToUpdate && { _id: cavaleiroToUpdate?.id }),
       name,
       skill,

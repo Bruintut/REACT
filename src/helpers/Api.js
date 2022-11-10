@@ -19,4 +19,4 @@ export const Api = {
   ...SacolaContext,
 };
 
-console.log(Api);
+

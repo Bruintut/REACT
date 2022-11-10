@@ -7,9 +7,9 @@ function DeletaCavaleiroModal({
   cavaleiroParaDeletar,
   onDeleteCavaleiro,
 }) {
-  const handleDelete = async (knight) => {
-    await CavaleiroService.deleteById(knight.id);
-    onDeleteCavaleiro(knight);
+  const handleDelete = async (cavaleiro) => {
+    await CavaleiroService.deleteById(cavaleiro.id);
+    onDeleteCavaleiro(cavaleiro);
     closeModal();
   };
 
