@@ -1,10 +1,10 @@
 const CavaleiroContext = {
   cavaleiroEndpoint: () => `${Api.baseUrl}`,
-  cavaleiroLista: () => `${CavaleiroContext.cavaleiroEndpoint()}find-knights`,
-  cavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}find-knight/${id}`,
-  createCavaleiro: () => `${CavaleiroContext.cavaleiroEndpoint()}create`,
-  updatCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}update/${id}`,
-  deleteCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}delete/${id}`,
+  cavaleiroLista: () => `${CavaleiroContext.cavaleiroEndpoint()}/find-knights`,
+  cavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/find-knight/${id}`,
+  createCavaleiro: () => `${CavaleiroContext.cavaleiroEndpoint()}/create`,
+  updatCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/update/${id}`,
+  deleteCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/delete/${id}`,
 };
 
 const SacolaContext = {
