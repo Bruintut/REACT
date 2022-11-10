@@ -62,7 +62,7 @@ function CavaleiroLista({
 
   const adicionaCavaleiroNaLista = useCallback(
     (cavaleiro) => {
-      const lista = [...cavaleiro, cavaleiro];
+      const lista = [...cavaleiros, cavaleiro];
       setCavaleiros(lista);
     },
     [cavaleiros]
