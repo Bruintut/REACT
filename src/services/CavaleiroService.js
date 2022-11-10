@@ -1,6 +1,6 @@
 import { Api } from "helpers/Api";
 
-const parseResponse = then((response) => response.json());
+const parseResponse = (response) => response.json();
 
 const transformCavaleiro = (cavaleiro) => {
 

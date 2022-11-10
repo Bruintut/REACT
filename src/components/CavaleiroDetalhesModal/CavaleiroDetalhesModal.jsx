@@ -21,7 +21,7 @@ function CavaleiroDetalhesModal({ cavaleiro, closeModal }) {
         <img
           className="CavaleiroDetalhesModal__picture"
           src={cavaleiro.picture}
-          alt={`cavaleiro com a habilidade de ${knight.skill}`}
+          alt={`cavaleiro com a habilidade de ${cavaleiro.skill}`}
         />
       </div>
     </Modal>
