@@ -2,7 +2,7 @@ import { ActionMode } from "constants/index";
 import "./CavaleiroListaItem.css";
 
 function CavaleiroListaItem({
-  cavaleiro,
+  knight,
   quantidadeSelecionada,
   index,
   onRemove,
@@ -53,14 +53,14 @@ function CavaleiroListaItem({
     ${mode !== ActionMode.NORMAL && "CavaleiroListaItem--disable"}
     ${mode === ActionMode.DELETAR && "CavaleiroListaItem--deletar"}
   `}
-      onClick={() => clickItem(cavaleiro.id)}
+      onClick={() => clickItem(knight.id)}
     >
       {badgeCounter(quantidadeSelecionada, index)}
       {badgeAction(mode !== ActionMode.NORMAL)}
       <div>
-        <div className="CavaleiroListaItem__name"> {cavaleiro.name} </div>
+        <div className="CavaleiroListaItem__name"> {knight.name} </div>
 
-        <div className="CavaleiroListaItem__skill"> {cavaleiro.skill} </div>
+        <div className="CavaleiroListaItem__skill"> {knight.skill} </div>
         <div className="CavaleiroListaItem__acoes Acoes">
           <button
             disabled={mode !== ActionMode.NORMAL}
@@ -80,7 +80,7 @@ function CavaleiroListaItem({
       <img
         className="CavaleiroListaItem__foto"
         src={cavaleiro.picture}
-        alt={`Cavaleiro com habilidade de ${cavaleiro.skill}`}
+        alt={`Cavaleiro com habilidade de ${knight.skill}`}
       />
     </div>
   );

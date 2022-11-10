@@ -41,7 +41,7 @@ function AdicionaEditaCavaleiroModal({
 
     const { name, skill, picture } = state;
 
-    const cavaleiro = {
+    const knight = {
       ...(cavaleiroToUpdate && { _id: cavaleiroToUpdate?.id }),
       name,
       skill,
@@ -49,9 +49,9 @@ function AdicionaEditaCavaleiroModal({
     };
 
     const serviceCall = {
-      [ActionMode.NORMAL]: () => CavaleiroService.create(cavaleiro),
+      [ActionMode.NORMAL]: () => CavaleiroService.create(knight),
       [ActionMode.ATUALIZAR]: () =>
-        CavaleiroService.updtateById(cavaleiroToUpdate?.id, cavaleiro),
+        CavaleiroService.updtateById(cavaleiroToUpdate?.id, knight),
     };
 
     const response = await serviceCall[mode]();

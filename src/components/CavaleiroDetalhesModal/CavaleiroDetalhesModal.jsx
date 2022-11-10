@@ -7,21 +7,21 @@ function CavaleiroDetalhesModal({ cavaleiro, closeModal }) {
     <Modal closeModal={closeModal}>
       <div className="CavaleiroDetalhesModal">
         <div>
-          <div className="CavaleiroDetalhesModal__name"> {cavaleiro.name} </div>
+          <div className="CavaleiroDetalhesModal__name"> {knight.name} </div>
           <div className="CavaleiroDetalhesModal__skill">
             {" "}
-            <b>Skill:</b> {cavaleiro.skill}{" "}
+            <b>Skill:</b> {knight.skill}{" "}
           </div>
 
           <div className="CavaleiroDetalhesModal__skill">
             {" "}
-            <b>Descrição:</b> {cavaleiro.skill}{" "}
+            <b>Descrição:</b> {knight.skill}{" "}
           </div>
         </div>
         <img
           className="CavaleiroDetalhesModal__picture"
-          src={cavaleiro.picture}
-          alt={`cavaleiro com a habilidade de ${cavaleiro.skill}`}
+          src={knight.picture}
+          alt={`cavaleiro com a habilidade de ${knight.skill}`}
         />
       </div>
     </Modal>

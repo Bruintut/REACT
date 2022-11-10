@@ -2,20 +2,19 @@ import { Api } from "helpers/Api";
 
 const parseResponse = (response) => response.json();
 
-const transformCavaleiro = (cavaleiro) => {
-  const [skill] = cavaleiro.name.split(" com ");
+const transformCavaleiro = (knight) => {
 
   return {
-    ...cavaleiro,
-    id: cavaleiro._id,
-    name: cavaleiro.name,
-    skill: cavaleiro.skill,
+    ...knight,
+    id: knight._id,
+    name: knight.name,
+    skill: knight.skill,
   };
 };
 
 const parseTransformLista = (response) =>
-  parseResponse(response).then((cavaleiros) =>
-    cavaleiros.map(transformCavaleiro)
+  parseResponse(response).then((knights) =>
+  knights.map(transformCavaleiro)
   );
 
 const parseTransformItem = (response) =>
@@ -29,16 +28,16 @@ export const CavaleiroService = {
   create: (cavaleiro) =>
     fetch(Api.createCavaleiro(), {
       method: "POST",
-      body: JSON.stringify(cavaleiro),
+      body: JSON.stringify(knight),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
     }).then(parseTransformItem),
-  updtateById: (id, cavaleiro) =>
+  updtateById: (id, knight) =>
     fetch(Api.updateCavaleiroById(id), {
       method: "PUT",
-      body: JSON.stringify(cavaleiro),
+      body: JSON.stringify(knight),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",

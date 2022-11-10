@@ -1,4 +1,4 @@
-export const cavaleiros = [
+export const knights = [
   {
       
     "name": "Seiya",
