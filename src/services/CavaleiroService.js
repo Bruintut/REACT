@@ -22,7 +22,7 @@ const parseTransformItem = (response) =>
 
 export const CavaleiroService = {
   getLista: () =>
-    fetch(Api.cavaleiroLista(), { mode: 'no-cors', method: "GET" }).then(parseTransformLista),
+    fetch(Api.cavaleiroLista(), { mode: 'cors', method: "GET" }).then(parseTransformLista),
   getById: (id) =>
     fetch(Api.cavaleiroById(id), { method: "GET" }).then(parseTransformItem),
   create: (cavaleiro) =>
