@@ -132,7 +132,7 @@ function AdicionaEditaCavaleiroModal({
           <button
             className="AdicionaCavaleiroModal__enviar"
             type="button"
-            disabled="{canDisable}"
+            disabled={canDisable}
             onClick={handleSend}
           >
             {ActionMode.NORMAL === mode ? "Enviar" : "Atualizar"}
