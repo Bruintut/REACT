@@ -49,9 +49,9 @@ function AdicionaEditaCavaleiroModal({
     };
 
     const serviceCall = {
-      [ActionMode.NORMAL]: () => CavaleiroService.create(knight),
+      [ActionMode.NORMAL]: () => CavaleiroService.create(cavaleiro),
       [ActionMode.ATUALIZAR]: () =>
-        CavaleiroService.updtateById(cavaleiroToUpdate?.id, knight),
+        CavaleiroService.updtateById(cavaleiroToUpdate?.id, cavaleiro),
     };
 
     const response = await serviceCall[mode]();
