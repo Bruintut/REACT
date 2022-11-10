@@ -25,7 +25,7 @@ export const CavaleiroService = {
     fetch(Api.cavaleiroLista(), { mode: 'no-cors', method: "GET" }).then(parseTransformLista),
   getById: (id) =>
     fetch(Api.cavaleiroById(id), { method: "GET" }).then(parseTransformItem),
-  create: (cavaleiro) =>
+  create: (knight) =>
     fetch(Api.createCavaleiro(), {
       method: "POST",
       body: JSON.stringify(knight),
