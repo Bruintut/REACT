@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./CavaleiroDetalhesModal.css";
 import Modal from "components/Modal/Modal";
 
