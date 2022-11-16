@@ -14,7 +14,7 @@ const SacolaContext = {
 }
 
 export const Api = {
-  baseUrl: "  https://cavaleiros-project.herokuapp.com/knights",
+  baseUrl: "  https://cavaleiros-project.herokuapp.com/knights ",
   ...CavaleiroContext,
   ...SacolaContext,
 };

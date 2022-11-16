@@ -3,7 +3,6 @@ import { Api } from "helpers/Api";
 const parseResponse = (response) => response.json();
 
 const transformCavaleiro = (cavaleiro) => {
-
   return {
     ...cavaleiro,
     id: cavaleiro._id,
@@ -14,7 +13,7 @@ const transformCavaleiro = (cavaleiro) => {
 
 const parseTransformLista = (response) =>
   parseResponse(response).then((cavaleiros) =>
-  cavaleiros.map(transformCavaleiro)
+    cavaleiros.map(transformCavaleiro)
   );
 
 const parseTransformItem = (response) =>
@@ -22,14 +21,20 @@ const parseTransformItem = (response) =>
 
 export const CavaleiroService = {
   getLista: () =>
-    fetch(Api.cavaleiroLista(), { mode: 'cors', method: "GET" }).then(parseTransformLista),
+    fetch(Api.cavaleiroLista(), {
+      mode: "cors",
+      method: "GET",
+    })
+      .then(parseTransformLista)
+      .catch((err) => console.log(err)),
+
   getById: (id) =>
     fetch(Api.cavaleiroById(id), { method: "GET" }).then(parseTransformItem),
   create: (cavaleiro) =>
     fetch(Api.createCavaleiro(), {
       method: "POST",
       body: JSON.stringify(cavaleiro),
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
