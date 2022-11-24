@@ -1,22 +1,15 @@
-const CavaleiroContext = {
-  cavaleiroEndpoint: () => `${Api.baseUrl}`,
-  cavaleiroLista: () => `${CavaleiroContext.cavaleiroEndpoint()}/find-knights`,
-  cavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/find-knight/${id}`,
-  createCavaleiro: () => `${CavaleiroContext.cavaleiroEndpoint()}/create`,
-  updatCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/update/${id}`,
-  deleteCavaleiroById: (id) => `${CavaleiroContext.cavaleiroEndpoint()}/delete/${id}`,
+const DataContext = {
+  dataEndpoint: () => `${Api.baseUrl}`,
+  cavaleiroLista: () => `${DataContext.dataEndpoint()}/posts`,
+  cavaleiroById: (id) => `${DataContext.dataEndpoint()}/posts/${id}`,
+  createCavaleiro: () => `${DataContext.dataEndpoint()}/posts`,
+  updatCavaleiroById: (id) => `${DataContext.dataEndpoint()}/posts/${id}`,
+  deleteCavaleiroById: (id) => `${DataContext.dataEndpoint()}/posts/${id}`,
 };
 
-const SacolaContext = {
-  getSacola: () => `${CavaleiroContext.cavaleiroEndpoint()}/all-carrinho`,
-  createSacola: () => `${CavaleiroContext.cavaleiroEndpoint()}/create-carrinho`,
-  purchase: () => `${CavaleiroContext.cavaleiroEndpoint()}/finish-carrinho`,
-}
-
 export const Api = {
-  baseUrl: "  https://cavaleiros-project.herokuapp.com/knights ",
-  ...CavaleiroContext,
-  ...SacolaContext,
+  baseUrl: "  https://jsonplaceholder.typicode.com",
+  ...DataContext,
 };
 
 
