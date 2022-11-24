@@ -1,9 +1,17 @@
-
+import { Outlet } from "react-router-dom";
+import "./Home.css"
 
 function Home(){
 
   return(
-    <h1>Hello</h1>
+    <div className="Home">
+      <div className="container">
+        <Outlet/>
+
+
+      </div>
+
+    </div>
   )
 }
 
